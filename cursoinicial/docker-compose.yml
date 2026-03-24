@@ -1,0 +1,12 @@
+services:
+  db-novo-projeto:
+    image: postgres:16
+    container_name: postgres_curso_spring
+    environment:
+      POSTGRES_DB: curso_spring
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+    ports:
+      - "5432:5432" # "Porta no seu Windows : Porta dentro do Container"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data # Para não perder os dados ao desligar
