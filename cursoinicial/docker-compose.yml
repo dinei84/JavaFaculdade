@@ -7,6 +7,6 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123
     ports:
-      - "5432:5432" # "Porta no seu Windows : Porta dentro do Container"
+      - "5433:5432"
     volumes:
-      - ./postgres_data:/var/lib/postgresql/data # Para não perder os dados ao desligar
+      - ./postgres_data:/var/lib/postgresql/data
